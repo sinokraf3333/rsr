@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hire Me — Brianda Wisnu Yusena</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+
+  <!-- BACK LINK -->
+  <a href="file:///D:/Maweb/index.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Kembali ke Portfolio
+  </a>
+
+  <main class="main">
+
+    <!-- LEFT PANEL -->
+    <aside class="panel-left">
+      <div class="panel-left-inner">
+        <div class="brand">
+          <span class="brand-logo">BVVY<em>.</em></span>
+          <span class="brand-tagline">Let's Build Something.</span>
+        </div>
+
+        <div class="info-block">
+          <h1 class="panel-title">Hire<br/><em>Brianda.</em></h1>
+          <p class="panel-sub">Ceritakan proyekmu dan saya akan menghubungi dalam 24 jam.</p>
+        </div>
+
+        <div class="contact-info">
+          <div class="ci-item">
+            <span class="ci-label">Email</span>
+            <span class="ci-val">briandawisnu45@gmail.com</span>
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">Lokasi</span>
+            <span class="ci-val">Malang/Lumajang, Indonesia</span>
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">Respons</span>
+            <span class="ci-val">07.00-15.00</span>
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">Status</span>
+            <span class="ci-val available"><span class="dot"></span>Tersedia</span>
+          </div>
+        </div>
+
+        <div class="service-list">
+          <p class="service-label">Layanan</p>
+          <div class="service-tags">
+            <span>UI/UX Design</span>
+            <span>Frontend Dev</span>
+            <span>Semi-Electric Engineer</span>
+            <span>Branding</span>
+          </div>
+        </div>
+
+        <div class="panel-deco">
+          <div class="deco-circle c1"></div>
+          <div class="deco-circle c2"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT: FORM -->
+    <section class="panel-right">
+      <div class="form-wrap">
+
+        <!-- PROGRESS -->
+        <div class="progress-bar">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="progress-label" id="progressLabel">Langkah 1 dari 3</span>
+        </div>
+
+        <!-- STEP INDICATORS -->
+        <div class="steps">
+          <div class="step active" data-step="1">
+            <div class="step-dot">1</div>
+            <span>Identitas</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step" data-step="2">
+            <div class="step-dot">2</div>
+            <span>Proyek</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step" data-step="3">
+            <div class="step-dot">3</div>
+            <span>Detail</span>
+          </div>
+        </div>
+
+        <!-- ---- STEP 1: IDENTITAS ---- -->
+        <div class="form-step active" id="step1">
+          <div class="step-head">
+            <p class="step-num">01 —</p>
+            <h2>Siapa kamu?</h2>
+            <p class="step-hint">Perkenalkan dirimu sebentar.</p>
+          </div>
+
+          <div class="field-group">
+            <div class="field">
+              <label for="name">Nama Lengkap <span>*</span></label>
+              <input type="text" id="name" placeholder="John Doe" autocomplete="off"/>
+              <div class="field-line"></div>
+            </div>
+            <div class="field">
+              <label for="email">Email <span>*</span></label>
+              <input type="email" id="email" placeholder="john@company.com" autocomplete="off"/>
+              <div class="field-line"></div>
+            </div>
+            <div class="field">
+              <label for="company">Perusahaan / Organisasi</label>
+              <input type="text" id="company" placeholder="Nama perusahaan (opsional)" autocomplete="off"/>
+              <div class="field-line"></div>
+            </div>
+            <div class="field">
+              <label for="phone">Nomor WhatsApp</label>
+              <input type="tel" id="phone" placeholder="+62 8xx xxxx xxxx" autocomplete="off"/>
+              <div class="field-line"></div>
+            </div>
+          </div>
+
+          <button class="btn-next" onclick="goStep(2)">
+            Lanjut
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M4 9H14M9 4L14 9L9 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- ---- STEP 2: PROYEK ---- -->
+        <div class="form-step" id="step2">
+          <div class="step-head">
+            <p class="step-num">02 —</p>
+            <h2>Proyeknya apa?</h2>
+            <p class="step-hint">Pilih yang paling menggambarkan kebutuhanmu.</p>
+          </div>
+
+          <div class="field-group">
+            <div class="field">
+              <label>Jenis Layanan <span>*</span></label>
+              <div class="option-cards">
+                <label class="option-card">
+                  <input type="radio" name="service" value="ui-ux"/>
+                  <div class="option-inner">
+                    <div class="option-icon">✦</div>
+                    <span>UI/UX Design</span>
+                  </div>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="service" value="frontend"/>
+                  <div class="option-inner">
+                    <div class="option-icon">⌘</div>
+                    <span>Frontend Dev</span>
+                  </div>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="service" value="branding"/>
+                  <div class="option-inner">
+                    <div class="option-icon">◈</div>
+                    <span>Branding</span>
+                  </div>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="service" value="fullstack"/>
+                  <div class="option-inner">
+                    <div class="option-icon">⬡</div>
+                    <span>Full Project</span>
+                  </div>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="service" value="motion"/>
+                  <div class="option-inner">
+                    <div class="option-icon">◎</div>
+                    <span>Motion Design</span>
+                  </div>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="service" value="other"/>
+                  <div class="option-inner">
+                    <div class="option-icon">…</div>
+                    <span>Lainnya</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Estimasi Budget <span>*</span></label>
+              <div class="budget-options">
+                <label class="budget-opt"><input type="radio" name="budget" value="<5jt"/> &lt; 5 Juta</label>
+                <label class="budget-opt"><input type="radio" name="budget" value="5-15jt"/> 5 – 15 Juta</label>
+                <label class="budget-opt"><input type="radio" name="budget" value="15-50jt"/> 15 – 50 Juta</label>
+                <label class="budget-opt"><input type="radio" name="budget" value=">50jt"/> &gt; 50 Juta</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-back" onclick="goStep(1)">← Kembali</button>
+            <button class="btn-next" onclick="goStep(3)">
+              Lanjut
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M4 9H14M9 4L14 9L9 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ---- STEP 3: DETAIL ---- -->
+        <div class="form-step" id="step3">
+          <div class="step-head">
+            <p class="step-num">03 —</p>
+            <h2>Ceritakan lebih.</h2>
+            <p class="step-hint">Semakin detail, semakin baik respons saya.</p>
+          </div>
+
+          <div class="field-group">
+            <div class="field">
+              <label for="project-name">Nama Proyek</label>
+              <input type="text" id="project-name" placeholder="Nama atau kode proyek" autocomplete="off"/>
+              <div class="field-line"></div>
+            </div>
+            <div class="field">
+              <label for="deadline">Target Selesai</label>
+              <input type="date" id="deadline"/>
+              <div class="field-line"></div>
+            </div>
+            <div class="field full">
+              <label for="desc">Deskripsi Proyek <span>*</span></label>
+              <textarea id="desc" placeholder="Ceritakan visi proyekmu — masalah yang ingin diselesaikan, audiens target, referensi yang kamu suka, dan hal-hal penting lainnya..." rows="5"></textarea>
+              <div class="field-line"></div>
+              <div class="char-count"><span id="charCount">0</span> / 1000</div>
+            </div>
+            <div class="field full">
+              <label for="ref">Link Referensi / Portfolio</label>
+              <input type="url" id="ref" placeholder="https://contoh.com" autocomplete="off"/>
+              <div class="field-line"></div>
+            </div>
+            <div class="field full">
+              <label class="checkbox-label">
+                <input type="checkbox" id="nda"/>
+                <span class="checkbox-custom"></span>
+                Proyek ini memerlukan NDA (Non-Disclosure Agreement)
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-back" onclick="goStep(2)">← Kembali</button>
+            <button class="btn-submit" id="submitBtn" onclick="submitForm()">
+              <span id="submitText">Kirim Pesan</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" id="submitIcon">
+                <path d="M2 9L14 9M14 9L9 4M14 9L9 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ---- SUCCESS ---- -->
+        <div class="form-success" id="successState">
+          <div class="success-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="19" stroke="var(--accent)" stroke-width="1.5"/>
+              <path d="M12 20L17.5 25.5L28 15" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Terima kasih!</h2>
+          <p>Pesanmu telah terkirim. Saya akan menghubungimu dalam <strong>24 jam</strong>.</p>
+          <a href="index.html" class="btn-home">Kembali ke Portfolio →</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
